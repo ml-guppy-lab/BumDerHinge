@@ -78,7 +78,7 @@ body, .app-background {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* left-align topics for Hinge-style */
+  align-items: flex-start;
 }
 
 /* For "caption", "name", "bio" label */
@@ -112,10 +112,29 @@ body, .app-background {
 }
 
 /* Differentiate cards visually if you want */
-.photo-card { padding-bottom: 10px; }
+.photo-card { padding-bottom: 10px; align-items: center;}
 .caption-card { font-style: italic; }
 .name-card { background: #FFFAF8; font-weight: 700; }
 .bio-card {}
+
+.profile-full-stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* left-align header */
+  padding-top: 16px;
+}
+
+.profile-header-name {
+  font-weight: 700;
+  color: var(--hinge-accent, #313131);
+  font-size: 1.25rem;
+  margin-bottom: 0.5em;
+  margin-left: 12px;
+  text-align: left;
+  width: 100%; /* stretches name row across */
+  box-sizing: border-box;
+}
 
 /* Photo Style */
 .profile-photo {

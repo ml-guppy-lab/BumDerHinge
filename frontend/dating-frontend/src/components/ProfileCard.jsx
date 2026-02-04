@@ -1,41 +1,53 @@
 export default function ProfileCard({ profile }) {
   if (!profile) return null;
 
-  // Find elements by type (extendable for more types later)
-  const photoElement = profile.elements.find(e => e.type === "photo");
-  const caption = photoElement ? photoElement.caption : "";
-  const bioElement = profile.elements.find(e => e.type === "bio");
-  const bioText = bioElement ? bioElement.text : "";
+  // Find the first element with type "text" for the main prompt card
+  const firstTextElement = profile.elements.find(e => e.type === "text");
+  // The rest (after first prompt and details)
+  const remainingElements = profile.elements.filter((e, idx) => e !== firstTextElement);
 
   return (
-    <div className="profile-card-stack">
-      {/* Card 1: Photo */}
-      {photoElement && (
-        <div className="element-card photo-card">
-          <img src={photoElement.url} alt={caption || "Profile"} className="profile-photo" />
-        </div>
-      )}
-
-      {/* Card 2: Photo caption, as a topic & subtopic */}
-      {caption && (
-        <div className="element-card info-card">
-          <div className="element-topic">Caption</div>
-          <div className="element-subtopic">{caption}</div>
-        </div>
-      )}
-
-      {/* Card 3: Name and age as topic/subtopic */}
-      <div className="element-card info-card">
-        <div className="element-topic">Name / Age</div>
-        <div className="element-subtopic">{profile.name}</div>
+    <div className="profile-full-stack">
+      {/* Profile name left-aligned above everything */}
+      <div className="profile-header-name">
+        {profile.name}
       </div>
 
-      {/* Card 4: Bio as topic/subtopic */}
-      {bioText && (
+      {/* Profile photo shown first in its own card */}
+      <div className="element-card photo-card">
+        <img src={profile.profilePic} alt="Profile" className="profile-photo" />
+      </div>
+
+      {/* First prompt with title/subtitle as a card */}
+      {firstTextElement && (
         <div className="element-card info-card">
-          <div className="element-topic">Bio</div>
-          <div className="element-subtopic">{bioText}</div>
+          <div className="element-topic">{firstTextElement.title}</div>
+          <div className="element-subtopic">{firstTextElement.subtitle}</div>
         </div>
+      )}
+
+      {/* Details card */}
+      <div className="element-card info-card">
+        <div className="element-topic">Details & Preferences</div>
+        <div className="element-subtopic" style={{ whiteSpace: 'pre-line' }}>
+          {profile.details}
+        </div>
+      </div>
+
+      {/* Other elements as cards */}
+      {remainingElements.map((element, idx) =>
+        element.type === "image" ? (
+          <div className="element-card photo-card" key={idx}>
+            {element.title && <div className="element-topic">{element.title}</div>}
+            <img src={element.url} alt={element.title || "Profile"} className="profile-photo" />
+            {element.subtitle && <div className="photo-caption">{element.subtitle}</div>}
+          </div>
+        ) : (
+          <div className="element-card info-card" key={idx}>
+            <div className="element-topic">{element.title}</div>
+            <div className="element-subtopic">{element.subtitle}</div>
+          </div>
+        )
       )}
     </div>
   );

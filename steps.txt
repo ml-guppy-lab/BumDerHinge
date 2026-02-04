@@ -3,6 +3,9 @@
 ----------------------------------------------------------------------------------------------
 
 git credential reject (to initialize my personal github repo)
+then paste these two lines below and hit enter twice:
+protocol=https
+host=github.com
 
 initialize repository: git remote set-url origin https://github.com/ml-guppy-lab/BumDerHinge.git
 
