@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "name": "RITESHU (5/10 on looks)",
+    "profilePic": "girl 1.webp",
+    "details": "23 man straight 6’1” Dog Scorpio no(to drink) no(to smoke)\nWork – apm\nCollege – nsit\nReligion – hindu\nHometown - delhi\nSouth Asian\nLong-term relationship\nMonogamy",
+    "elements": [
+      { "type": "image", "title": "Mirror selfie", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "image", "title": "Gym selfie", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "text", "title": "The one thing you should know about me is", "subtitle": "I like my mornings sweaty and my nights curious. I run. I lift. I overthink systems, patterns and why my form still isn’t perfect. Physically strong, mentally a nerd. Spiritually tired but trying." },
+      { "type": "text", "title": "I am weirdly attracted to", "subtitle": "Autistic, nerdy girls. The kind who infodump with passion, miss social cues but never miss patterns, and make conversations feel like a Wikipedia rabbit hole I actually want to fall into." },
+      { "type": "image", "title": "Photo wearing glasses with price tag", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "text", "title": "We’ll get along if", "subtitle": "You’re kind but not naïve. Ambitious but not empty. And you don’t confuse intensity with intimacy." },
+      { "type": "image", "title": "Mirror selfie showing off biceps", "subtitle": "Post-coffee me", "url": "girl 1.webp" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "M (6/10 on looks)",
+    "profilePic": "girl 2.webp",
+    "details": "26 man straight 5’10” drink(yes) smoke(no)\nWork – DE Shaw\nCollege – NIT Kurukshetra\nReligion – hindu\nHometown – new delhi\nLiberal\nFiguring out my dation goals\nFiguring out my relationship type",
+    "elements": [
+      { "type": "image", "title": "Photo with vine glass", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "image", "title": "Photo in an ocean", "subtitle": "Probably Maldives", "url": "girl 2.webp" },
+      { "type": "text", "title": "I’m looking for", "subtitle": "Someone funny and smart who loves ‘Queen’ and Beer 🍺" },
+      { "type": "text", "title": "In my friend group, I’m the one who", "subtitle": "Photobombs xD" },
+      { "type": "text", "title": "First round is on me if", "subtitle": "You’re down for a 90’s sitcom quiz!" },
+      { "type": "image", "title": "Trekking photo", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "image", "title": "Bike riding photo", "subtitle": "", "url": "girl 2.webp" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Vish (6/10 on looks)",
+    "profilePic": "girl 1.webp",
+    "details": "22 man straight 5’8” drink(sometimes) smoke(sometimes)\nCollege – msrit\nReligion – hindu\nHometown – Udaipur\nShort-term relationship, open to long\nFiguring out my relationship type",
+    "elements": [
+      { "type": "text", "title": "My greatest strength", "subtitle": "Is that I can win you anytime" },
+      { "type": "image", "title": "Photo of him playing dandiya", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "image", "title": "Gym photo", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "text", "title": "My simple pleasures", "subtitle": "Beach, beer and you" },
+      { "type": "image", "title": "Photo of him sitting on a rock near a beach", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "text", "title": "My love language is", "subtitle": "Physical touch obvio" },
+      { "type": "image", "title": "Photo of him taking a mirror selfie holding his dog", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "image", "title": "Another dandiya photo", "subtitle": "", "url": "girl 1.webp" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "T (4/10 on looks)",
+    "profilePic": "girl 2.webp",
+    "details": "22 man straight 5’7” drink(yes) smoke(sometimes)\nHometown – Kashmir\nShort-term relationship\nMonogamy",
+    "elements": [
+      { "type": "text", "title": "Typical Sunday", "subtitle": "Hitting the gym" },
+      { "type": "image", "title": "Another mirror selfie", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "image", "title": "Again a mirror selfie", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "text", "title": "Together, we could", "subtitle": "Have fun" },
+      { "type": "image", "title": "At the airport", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "text", "title": "I go crazy for", "subtitle": "You" },
+      { "type": "image", "title": "Smoking hookah", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "image", "title": "Another mirror selfie", "subtitle": "", "url": "girl 2.webp" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "George (7/10 on looks)",
+    "profilePic": "girl 1.webp",
+    "details": "27 man straight 5’7” drink(yes)\nAgnostic\nHometown – Kottayam\nSouth Asian\nShort-term relationship, open to long",
+    "elements": [
+      { "type": "text", "title": "I go crazy for", "subtitle": "Hiking." },
+      { "type": "image", "title": "Picture enjoying sunset on mountain", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "image", "title": "Hiking on a mountain", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "text", "title": "Together, we could", "subtitle": "Make memories" },
+      { "type": "image", "title": "Night picture holding a cat", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "text", "title": "I know the best spot in town for", "subtitle": "Sunset." },
+      { "type": "image", "title": "Pic in front of a car", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "image", "title": "Pic with a ponytail", "subtitle": "", "url": "girl 1.webp" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "K (7/10 on looks)",
+    "profilePic": "girl 2.webp",
+    "details": "27 man straight 5’8” drink(sometimes) smoke(no)\nWork – associate at G5\nCollege – IIITS\nReligion – hindu\nLiberal\nSouth Asian\nLong-term relationship\nMonogamy",
+    "elements": [
+      { "type": "text", "title": "Together, we could", "subtitle": "Go on long drives, cook together, travel, or just stay in and watch rom-coms (Jab we met fans?), web series, animes. Playing PS5 with me is non-negotiable." },
+      { "type": "image", "title": "Picture sitting in a restaurant", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "image", "title": "Scuba diving", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "text", "title": "Dating me is like", "subtitle": "Having a personal chef. But I only cook exotic dishes and desserts." },
+      { "type": "image", "title": "Another selfie", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "text", "title": "My simple pleasures", "subtitle": "Gym. Music. Sneakers. F1. Making stupid jokes that people find funny, teasing my friends (you could be next horns😈)" },
+      { "type": "image", "title": "With his cat on bed", "subtitle": "", "url": "girl 2.webp" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "M (10/10 on looks)",
+    "profilePic": "girl 1.webp",
+    "details": "23 man straight 6’0” dog drink(yes) smoke(no)\nSpiritual\nHometown – Navi Mumbai\nLiberal\nSoutheast Asian\nShort-term relationship, open to long\nFiguring out my relationship type",
+    "elements": [
+      { "type": "text", "title": "Together we could", "subtitle": "Exchange dad jokes, I’ll start, a group of own (ullu) is called parliament 😹, just google it." },
+      { "type": "image", "title": "Normal picture", "subtitle": "Very handsome", "url": "girl 1.webp" },
+      { "type": "image", "title": "Pic of his dog with scarf", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "text", "title": "A random fact I love is", "subtitle": "People that my dog approves, he just barks at everyone or ends up super cozy." },
+      { "type": "image", "title": "Mirror selfie at gym", "subtitle": "Looking sweaty and hot", "url": "girl 1.webp" },
+      { "type": "text", "title": "Dating me is like", "subtitle": "Agreeing to be a food-taster, it’s a spectrum of flavours slightly inclined to unpleasant side." },
+      { "type": "image", "title": "Indian street food pics", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "image", "title": "Enjoying sunset", "subtitle": "", "url": "girl 1.webp" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "M (7/10 on looks)",
+    "profilePic": "girl 2.webp",
+    "details": "26 man 6’1” drink(sometimes) smoke(no)\nWork – airframe engineer at aerospace industry\nLong term relationship, open to short",
+    "elements": [
+      { "type": "text", "title": "I’m weirdly attracted to", "subtitle": "Girls with zero sense of direction." },
+      { "type": "image", "title": "Photo in a forrest", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "text", "title": "Typical Sunday", "subtitle": "Either reading a book or off-roading trails… there’s no in between." },
+      { "type": "image", "title": "Photo of his cat on bike", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "text", "title": "The one thing I’d love to know about you is", "subtitle": "Do you prefer dineouts or cooking something together at home!" },
+      { "type": "image", "title": "Photo of him skiing", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "image", "title": "Photo of him on bike near mountain", "subtitle": "", "url": "girl 2.webp" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Chinmay (7/10 on looks)",
+    "profilePic": "girl 1.webp",
+    "details": "23 man straight 5’10” drink(yes) smoke(no)\nReligion – hindu\nHometown – Dehradun\nNot political\nSouth Asian\nShort-term relationship, open to long\nMonogamy",
+    "elements": [
+      { "type": "text", "title": "I recently discovered that", "subtitle": "It is impossible to hum while holding your nose" },
+      { "type": "image", "title": "Gym photo", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "image", "title": "Photo near a beautiful door", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "text", "title": "The way to win me over is", "subtitle": "Lame Jokes" },
+      { "type": "image", "title": "Smiling and sitting photo at night", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "text", "title": "Teach me something about", "subtitle": "How to be an extrovert" },
+      { "type": "image", "title": "Photo of him smiling", "subtitle": "", "url": "girl 1.webp" },
+      { "type": "image", "title": "Photo of him skydiving", "subtitle": "", "url": "girl 1.webp" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Mohit (6/10 on looks)",
+    "profilePic": "girl 2.webp",
+    "details": "25 man bi 5’10” drink(sometimes) smoke(no)\nWork – entrepreneur at Stealth startup\nCollege – imperial college London\nLong-term relationship, open to short",
+    "elements": [
+      { "type": "text", "title": "Best travel story", "subtitle": "Landed in Budapest at midnight. Met a bunch of strangers in the airport and went club hopping all night. Took the next flight to Prague with these strangers and gave a whole new meaning to club/country hopping ;)" },
+      { "type": "image", "title": "Pic clubbing", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "image", "title": "Pic clubbing on weekend", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "text", "title": "The dorkiest thing about me is", "subtitle": "I like watching old Bollywood movies and I think that’s the best first date plan!" },
+      { "type": "image", "title": "Pic dancing at concert", "subtitle": "", "url": "girl 2.webp" },
+      { "type": "text", "title": "I go crazy for", "subtitle": "Authentic ramen and ofcource pad thai! Bonus points for sharing the best spot in the city!" },
+      { "type": "image", "title": "Pic with random strangers", "subtitle": "a favourite memory of mine", "url": "girl 2.webp" },
+      { "type": "image", "title": "Pic making shots", "subtitle": "my life behind the scenes", "url": "girl 2.webp" }
+    ]
+  }
+]

@@ -17,3 +17,16 @@ initialize repository: git remote set-url origin https://github.com/ml-guppy-lab
 3. to run frontend: npm run dev
 4. npm install bootstrap
 5. npm install react-router-dom
+
+
+----------------------------------------------------------------------------------------------
+************ backend *******************************************************
+----------------------------------------------------------------------------------------------
+virtual environment: 
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+to run backend:
+uvicorn main:app --reload
