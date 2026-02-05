@@ -15,3 +15,5 @@ initialize repository: git remote set-url origin https://github.com/ml-guppy-lab
 1. create react app: npm create vite@latest
 2. cd dating-frontend
 3. to run frontend: npm run dev
+4. npm install bootstrap
+5. npm install react-router-dom

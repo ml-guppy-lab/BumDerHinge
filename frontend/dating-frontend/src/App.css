@@ -14,48 +14,48 @@ body, .app-background {
 }
 
 .app-background {
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--hinge-bg);
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hinge-bg);
 }
 
 .iphone-frame {
-    width: 390px;
-    height: 844px;
-    background: var(--hinge-white);
-    border-radius: 48px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.20);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 390px;
+  height: 844px;
+  background: var(--hinge-white);
+  border-radius: 48px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .iphone-notch {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 210px;
-    height: 30px;
-    background: #161616;
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 210px;
+  height: 30px;
+  background: #161616;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  z-index: 10;
 }
 
 .iphone-content {
-    margin-top: 40px; /* space under notch */
-    width: 100%;
-    height: calc(100% - 40px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
+  margin-top: 40px; /* space under notch */
+  width: 100%;
+  height: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
 }
 
 /* Card stack for each profile */
@@ -67,6 +67,15 @@ body, .app-background {
   padding-top: 16px;
 }
 
+/* Stack for a single profile */
+.profile-full-stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the elements! */
+  padding-top: 16px;
+}
+
 /* Single "card" for each element */
 .element-card {
   width: 320px;
@@ -74,7 +83,7 @@ body, .app-background {
   background: var(--hinge-white);
   border-radius: 24px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-  margin-bottom: 18px;
+  margin: 0 auto 18px auto; /* Center horizontally */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -117,14 +126,7 @@ body, .app-background {
 .name-card { background: #FFFAF8; font-weight: 700; }
 .bio-card {}
 
-.profile-full-stack {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* left-align header */
-  padding-top: 16px;
-}
-
+/* Profile Name/Header */
 .profile-header-name {
   font-weight: 700;
   color: var(--hinge-accent, #313131);
@@ -132,7 +134,7 @@ body, .app-background {
   margin-bottom: 0.5em;
   margin-left: 12px;
   text-align: left;
-  width: 100%; /* stretches name row across */
+  width: 320px; /* Match card and align with cards */
   box-sizing: border-box;
 }
 
@@ -172,6 +174,7 @@ body, .app-background {
   justify-content: space-between;
   width: 80%;
   margin: 24px auto 0 auto;
+  margin-bottom: 32px; /* 👈 Add this line for space below */
 }
 
 .swipe-left, .swipe-right {
