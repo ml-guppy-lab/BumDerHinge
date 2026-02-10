@@ -1,7 +1,8 @@
 [
   {
     "id": 1,
-    "name": "RITESHU (5/10 on looks)",
+    "name": "RITESHU",
+    "looks": "5/10",
     "profilePic": "girl 1.webp",
     "details": "23 man straight 6’1” Dog Scorpio no(to drink) no(to smoke)\nWork – apm\nCollege – nsit\nReligion – hindu\nHometown - delhi\nSouth Asian\nLong-term relationship\nMonogamy",
     "elements": [
@@ -16,7 +17,8 @@
   },
   {
     "id": 2,
-    "name": "M (6/10 on looks)",
+    "name": "M",
+    "looks": "6/10",
     "profilePic": "girl 2.webp",
     "details": "26 man straight 5’10” drink(yes) smoke(no)\nWork – DE Shaw\nCollege – NIT Kurukshetra\nReligion – hindu\nHometown – new delhi\nLiberal\nFiguring out my dation goals\nFiguring out my relationship type",
     "elements": [
@@ -31,7 +33,8 @@
   },
   {
     "id": 3,
-    "name": "Vish (6/10 on looks)",
+    "name": "Vish",
+    "looks": "6/10",
     "profilePic": "girl 1.webp",
     "details": "22 man straight 5’8” drink(sometimes) smoke(sometimes)\nCollege – msrit\nReligion – hindu\nHometown – Udaipur\nShort-term relationship, open to long\nFiguring out my relationship type",
     "elements": [
@@ -47,7 +50,8 @@
   },
   {
     "id": 4,
-    "name": "T (4/10 on looks)",
+    "name": "T",
+    "looks": "4/10",
     "profilePic": "girl 2.webp",
     "details": "22 man straight 5’7” drink(yes) smoke(sometimes)\nHometown – Kashmir\nShort-term relationship\nMonogamy",
     "elements": [
@@ -63,7 +67,8 @@
   },
   {
     "id": 5,
-    "name": "George (7/10 on looks)",
+    "name": "George",
+    "looks": "7/10",
     "profilePic": "girl 1.webp",
     "details": "27 man straight 5’7” drink(yes)\nAgnostic\nHometown – Kottayam\nSouth Asian\nShort-term relationship, open to long",
     "elements": [
@@ -79,7 +84,8 @@
   },
   {
     "id": 6,
-    "name": "K (7/10 on looks)",
+    "name": "K",
+    "looks": "7/10",
     "profilePic": "girl 2.webp",
     "details": "27 man straight 5’8” drink(sometimes) smoke(no)\nWork – associate at G5\nCollege – IIITS\nReligion – hindu\nLiberal\nSouth Asian\nLong-term relationship\nMonogamy",
     "elements": [
@@ -94,7 +100,8 @@
   },
   {
     "id": 7,
-    "name": "M (10/10 on looks)",
+    "name": "M",
+    "looks": "10/10",
     "profilePic": "girl 1.webp",
     "details": "23 man straight 6’0” dog drink(yes) smoke(no)\nSpiritual\nHometown – Navi Mumbai\nLiberal\nSoutheast Asian\nShort-term relationship, open to long\nFiguring out my relationship type",
     "elements": [
@@ -110,7 +117,8 @@
   },
   {
     "id": 8,
-    "name": "M (7/10 on looks)",
+    "name": "M",
+    "looks": "7/10",
     "profilePic": "girl 2.webp",
     "details": "26 man 6’1” drink(sometimes) smoke(no)\nWork – airframe engineer at aerospace industry\nLong term relationship, open to short",
     "elements": [
@@ -125,7 +133,8 @@
   },
   {
     "id": 9,
-    "name": "Chinmay (7/10 on looks)",
+    "name": "Chinmay",
+    "looks": "7/10",
     "profilePic": "girl 1.webp",
     "details": "23 man straight 5’10” drink(yes) smoke(no)\nReligion – hindu\nHometown – Dehradun\nNot political\nSouth Asian\nShort-term relationship, open to long\nMonogamy",
     "elements": [
@@ -141,7 +150,8 @@
   },
   {
     "id": 10,
-    "name": "Mohit (6/10 on looks)",
+    "name": "Mohit",
+    "looks": "6/10",
     "profilePic": "girl 2.webp",
     "details": "25 man bi 5’10” drink(sometimes) smoke(no)\nWork – entrepreneur at Stealth startup\nCollege – imperial college London\nLong-term relationship, open to short",
     "elements": [

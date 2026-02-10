@@ -17,8 +17,8 @@ export default function IPhoneFrame() {
     'girl 2.webp': girl2,
   };
 
-  React.useEffect(() => {
-    fetch("http://localhost:8000/api/profiles/0")
+  const fetchProfile = (index) => {
+    fetch(`http://localhost:8000/api/profiles/${index}`)
       .then((res) => {
         if (!res.ok) throw new Error("No more profiles");
         return res.json();
@@ -37,13 +37,24 @@ export default function IPhoneFrame() {
           });
         }
         setProfile(data);
+        setProfileIdx(index);
+        // Scroll back to top
+        setTimeout(() => {
+          if (contentRef.current) contentRef.current.scrollTop = 0;
+        }, 0);
       })
-      .catch((err) => setProfile(null));
+      .catch((err) => {
+        setProfile(null);
+        alert("No more profiles!");
+      });
+  };
+
+  React.useEffect(() => {
+    fetchProfile(0);
   }, []);
 
   const handleNext = () => {
-    // For now, just alert no more profiles (implement next profile fetch if needed)
-    alert("No more profiles!");
+    fetchProfile(profileIdx + 1);
   };
 
   return (
