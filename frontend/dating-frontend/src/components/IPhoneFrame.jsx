@@ -1,73 +1,66 @@
-// import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
+import girl1 from '../assets/girl 1.webp';
+import girl2 from '../assets/girl 2.webp';
 // import profiles from "../profiles";
-// import ProfileCard from "./ProfileCard";
-
-// export default function IPhoneFrame() {
-//   const [profileIdx, setProfileIdx] = useState(0);
-//   const contentRef = useRef(null);
-
-//   const currentProfile = profiles[profileIdx];
-
-//   const handleNext = () => {
-//     if (profileIdx < profiles.length - 1) {
-//       setProfileIdx(profileIdx + 1);
-//       setTimeout(() => {
-//         // Scroll back to top of iphone-content div
-//         if (contentRef.current) contentRef.current.scrollTop = 0;
-//       }, 0);
-//     } else {
-//       alert("No more profiles!");
-//     }
-//   };
-
-//   return (
-//     <div className="iphone-frame">
-//       <div className="iphone-notch" />
-//       <div className="iphone-content" ref={contentRef}>
-//         <ProfileCard profile={currentProfile} />
-//         <div className="swipe-buttons">
-//           <button className="swipe-left" onClick={handleNext}>❌ Left</button>
-//           <button className="swipe-right" onClick={handleNext}>✅ Right</button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-import { useState, useRef } from "react";
-import profiles from "../profiles";
 import ProfileCard from "./ProfileCard";
 import { useNavigate } from 'react-router-dom';
 
 export default function IPhoneFrame() {
-  const [profileIdx, setProfileIdx] = useState(0);
+  const [profile, setProfile] = useState(null);
+  const [profileIdx, setProfileIdx] = useState(0); // For future use if you want to fetch next
   const contentRef = useRef(null);
   const navigate = useNavigate();
 
-  const currentProfile = profiles[profileIdx];
+  // Map image filenames to imported images
+  const imageMap = {
+    'girl 1.webp': girl1,
+    'girl 2.webp': girl2,
+  };
+
+  React.useEffect(() => {
+    fetch("http://localhost:8000/api/profiles/0")
+      .then((res) => {
+        if (!res.ok) throw new Error("No more profiles");
+        return res.json();
+      })
+      .then((data) => {
+        // Map profilePic and all element image URLs
+        if (data.profilePic && imageMap[data.profilePic]) {
+          data.profilePic = imageMap[data.profilePic];
+        }
+        if (Array.isArray(data.elements)) {
+          data.elements = data.elements.map(el => {
+            if (el.type === 'image' && el.url && imageMap[el.url]) {
+              return { ...el, url: imageMap[el.url] };
+            }
+            return el;
+          });
+        }
+        setProfile(data);
+      })
+      .catch((err) => setProfile(null));
+  }, []);
 
   const handleNext = () => {
-    if (profileIdx < profiles.length - 1) {
-      setProfileIdx(profileIdx + 1);
-      setTimeout(() => {
-        if (contentRef.current) contentRef.current.scrollTop = 0;
-      }, 0);
-    } else {
-      alert("No more profiles!");
-    }
+    // For now, just alert no more profiles (implement next profile fetch if needed)
+    alert("No more profiles!");
   };
 
   return (
     <div className="d-flex flex-column align-items-center justify-content-center min-vh-100">
       <div className="mb-3 w-100 d-flex justify-content-start">
-        <button className="btn btn-outline-secondary" onClick={() => navigate('/')}>
+        <button className="btn btn-outline-secondary" onClick={() => navigate('/')}> 
           ◀ Home
         </button>
       </div>
       <div className="iphone-frame shadow">
         <div className="iphone-notch" />
         <div className="iphone-content" ref={contentRef}>
-          <ProfileCard profile={currentProfile} />
+          {profile ? (
+            <ProfileCard profile={profile} />
+          ) : (
+            <div>Loading profile...</div>
+          )}
           <div className="swipe-buttons mt-4 d-flex justify-content-between">
             <button className="btn btn-danger swipe-left px-5" onClick={handleNext}>❌ Left</button>
             <button className="btn btn-success swipe-right px-5" onClick={handleNext}>✅ Right</button>
