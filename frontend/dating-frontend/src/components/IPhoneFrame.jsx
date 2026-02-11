@@ -124,16 +124,18 @@ export default function IPhoneFrame() {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'rgba(0, 0, 0, 0.85)',
+          background: 'rgba(0, 0, 0, 0.5)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           zIndex: 1000,
+          pointerEvents: 'none',
           animation: 'fadeIn 0.3s ease-in-out'
         }}>
           <div style={{
             textAlign: 'center',
-            color: 'white'
+            color: 'white',
+            pointerEvents: 'none'
           }}>
             <div style={{
               fontSize: '80px',
