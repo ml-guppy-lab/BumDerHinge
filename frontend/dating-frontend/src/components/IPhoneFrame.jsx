@@ -3,11 +3,14 @@ import girl1 from '../assets/girl 1.webp';
 import girl2 from '../assets/girl 2.webp';
 // import profiles from "../profiles";
 import ProfileCard from "./ProfileCard";
+import JudgmentOverlay from "./JudgmentOverlay";
 import { useNavigate } from 'react-router-dom';
 
 export default function IPhoneFrame() {
   const [profile, setProfile] = useState(null);
-  const [profileIdx, setProfileIdx] = useState(0); // For future use if you want to fetch next
+  const [profileIdx, setProfileIdx] = useState(0);
+  const [judgment, setJudgment] = useState(null);
+  const [isLoadingJudgment, setIsLoadingJudgment] = useState(false);
   const contentRef = useRef(null);
   const navigate = useNavigate();
 
@@ -15,6 +18,23 @@ export default function IPhoneFrame() {
   const imageMap = {
     'girl 1.webp': girl1,
     'girl 2.webp': girl2,
+  };
+
+  const fetchAIJudgment = (index) => {
+    setIsLoadingJudgment(true);
+    fetch(`http://localhost:8000/api/judge/${index}`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to get AI judgment");
+        return res.json();
+      })
+      .then((data) => {
+        setJudgment(data);
+        setIsLoadingJudgment(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching AI judgment:", err);
+        setIsLoadingJudgment(false);
+      });
   };
 
   const fetchProfile = (index) => {
@@ -42,6 +62,9 @@ export default function IPhoneFrame() {
         setTimeout(() => {
           if (contentRef.current) contentRef.current.scrollTop = 0;
         }, 0);
+        
+        // Fetch AI judgment for this profile
+        fetchAIJudgment(index);
       })
       .catch((err) => {
         setProfile(null);
@@ -54,7 +77,12 @@ export default function IPhoneFrame() {
   }, []);
 
   const handleNext = () => {
+    setJudgment(null); // Clear current judgment
     fetchProfile(profileIdx + 1);
+  };
+
+  const closeJudgment = () => {
+    setJudgment(null);
   };
 
   return (
@@ -78,6 +106,31 @@ export default function IPhoneFrame() {
           </div>
         </div>
       </div>
+      
+      {/* AI Judgment Overlay */}
+      {judgment && (
+        <JudgmentOverlay 
+          decision={judgment.decision} 
+          reason={judgment.reason} 
+          onClose={closeJudgment} 
+        />
+      )}
+      
+      {/* Loading indicator for AI judgment */}
+      {isLoadingJudgment && (
+        <div style={{
+          position: 'fixed',
+          top: '20px',
+          right: '20px',
+          background: 'rgba(0,0,0,0.8)',
+          color: 'white',
+          padding: '12px 20px',
+          borderRadius: '8px',
+          zIndex: 999
+        }}>
+          AI is judging... 🤖
+        </div>
+      )}
     </div>
   );
 }
