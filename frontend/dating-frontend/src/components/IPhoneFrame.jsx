@@ -116,19 +116,83 @@ export default function IPhoneFrame() {
         />
       )}
       
-      {/* Loading indicator for AI judgment */}
+      {/* Loading animation for AI judgment */}
       {isLoadingJudgment && (
         <div style={{
           position: 'fixed',
-          top: '20px',
-          right: '20px',
-          background: 'rgba(0,0,0,0.8)',
-          color: 'white',
-          padding: '12px 20px',
-          borderRadius: '8px',
-          zIndex: 999
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'rgba(0, 0, 0, 0.85)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000,
+          animation: 'fadeIn 0.3s ease-in-out'
         }}>
-          AI is judging... 🤖
+          <div style={{
+            textAlign: 'center',
+            color: 'white'
+          }}>
+            <div style={{
+              fontSize: '80px',
+              marginBottom: '20px',
+              animation: 'pulse 1.5s ease-in-out infinite'
+            }}>
+              🤖
+            </div>
+            <h2 style={{
+              fontSize: '28px',
+              fontWeight: 'bold',
+              marginBottom: '12px',
+              letterSpacing: '1px'
+            }}>
+              AI is Judging...
+            </h2>
+            <div style={{
+              display: 'flex',
+              gap: '8px',
+              justifyContent: 'center',
+              marginTop: '20px'
+            }}>
+              <div style={{
+                width: '12px',
+                height: '12px',
+                borderRadius: '50%',
+                background: 'white',
+                animation: 'bounce 1.4s ease-in-out infinite'
+              }}></div>
+              <div style={{
+                width: '12px',
+                height: '12px',
+                borderRadius: '50%',
+                background: 'white',
+                animation: 'bounce 1.4s ease-in-out 0.2s infinite'
+              }}></div>
+              <div style={{
+                width: '12px',
+                height: '12px',
+                borderRadius: '50%',
+                background: 'white',
+                animation: 'bounce 1.4s ease-in-out 0.4s infinite'
+              }}></div>
+            </div>
+            <style>{`
+              @keyframes pulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+              }
+              @keyframes bounce {
+                0%, 80%, 100% { transform: translateY(0); }
+                40% { transform: translateY(-15px); }
+              }
+              @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+            `}</style>
+          </div>
         </div>
       )}
     </div>
