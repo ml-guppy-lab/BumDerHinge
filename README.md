@@ -79,6 +79,8 @@ graph TB
     style AI fill:#ffe1f5
     style LLAMA fill:#ff69b4,color:#fff
 ```
+<img width="2110" height="1392" alt="image" src="https://github.com/user-attachments/assets/ca974450-37bc-440d-953a-0b637ad7aa08" />
+
 
 ## 🛠️ Tech Stack
 
