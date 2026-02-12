@@ -123,12 +123,14 @@ export default function ProfileCard({ profile }) {
           <div className="element-subtopic">{firstTextElement.subtitle}</div>
         </div>
       )}
-      <div className="element-card info-card">
-        {/* <div className="element-topic">Details & Preferences</div> */}
-        <div className="element-subtopic" style={{ whiteSpace: 'pre-line' }}>
-          {formatDetails(profile.details)}
+      {profile.details && (
+        <div className="element-card info-card">
+          {/* <div className="element-topic">Details & Preferences</div> */}
+          <div className="element-subtopic" style={{ whiteSpace: 'pre-line' }}>
+            {formatDetails(profile.details)}
+          </div>
         </div>
-      </div>
+      )}
       {remainingElements.map((element, idx) =>
         element.type === "image" ? (
           <div className="element-card photo-card" key={idx}>
