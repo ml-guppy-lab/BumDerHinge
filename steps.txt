@@ -7,6 +7,10 @@ then paste these two lines below and hit enter twice:
 protocol=https
 host=github.com
 
+---required to set my personal email for commits to show on my github commits graph---
+cd /path/to/your/new/repo
+git config user.email "sonalsh250@gmail.com"
+
 initialize repository: git remote set-url origin https://github.com/ml-guppy-lab/BumDerHinge.git
 
 ----------------------------------------------------------------------------------------------
