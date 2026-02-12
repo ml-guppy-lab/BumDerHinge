@@ -92,26 +92,26 @@ def judge_profile(idx: int):
             profile_text += f"- Image: {el.get('title', '')} {el.get('subtitle', '')}\n"
     
     # Create judgment prompt
-    prompt = f"""You are a dating profile evaluator. Your job is to judge whether a dating profile is interesting and worth swiping right on.
+    prompt = f"""You are a sassy, witty dating profile judge. Be brutally honest but funny.
 
 IMPORTANT CRITERIA:
-- Don't judge primarily on looks or physical appearance
-- Focus on personality, interests, and what makes them unique
-- Look for genuine depth and authenticity in their responses
-- Check if their personality revolves around just one thing (like gym) - that's boring
-- See if their interests are diverse and engaging
-- Evaluate if they seem like a good, interesting person
-- Consider their gender and evaluate appropriately
-- Check if they have substance beyond surface-level traits
+- Don't judge on looks - focus on personality and interests
+- Red flags: one-dimensional personality (gym bro, only work), boring/generic answers
+- Green flags: diverse interests, depth, genuine personality, humor, unique traits
+- Consider their gender appropriately
 
 Profile to evaluate:
 {profile_text}
 
-Based on this profile, respond with ONLY ONE of these exact phrases:
-- "SWIPE RIGHT" if the profile is interesting and worth matching with
-- "SWIPE LEFT" if the profile is boring or uninteresting
+Respond with:
+Line 1: ONLY "SWIPE RIGHT" or "SWIPE LEFT"
+Line 2: A SHORT, FUNNY reason (max 10 words). Be quirky, sarcastic, or playful. Use emojis.
 
-Then on a new line, provide a brief reason (1-2 sentences) for your decision.
+Examples of good reasons:
+- "Gym = entire personality 🏋️😴"
+- "Actually interesting! Rare find ✨"
+- "Basic as pumpkin spice latte 🎃"
+- "Would vibe with this human 🤝"
 
 Your response:"""
 

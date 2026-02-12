@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../JudgmentOverlay.css';
 
-export default function JudgmentOverlay({ decision, reason, onClose }) {
+export default function JudgmentOverlay({ decision, reason, onClose, onAutoAction }) {
   if (!decision) return null;
 
   const isRight = decision === "SWIPE RIGHT";
+
+  useEffect(() => {
+    // Automatically trigger scroll and swipe after 2.5 seconds
+    const timer = setTimeout(() => {
+      if (onAutoAction) {
+        onAutoAction(isRight);
+      }
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, [isRight, onAutoAction]);
 
   return (
     <div className="judgment-overlay" onClick={onClose}>

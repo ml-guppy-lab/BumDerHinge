@@ -4,12 +4,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   animation: fadeIn 0.3s ease-in-out;
+  backdrop-filter: blur(3px);
 }
 
 @keyframes fadeIn {
@@ -23,10 +24,10 @@
 
 .judgment-card {
   background: white;
-  border-radius: 24px;
-  padding: 40px 32px;
-  max-width: 400px;
-  width: 90%;
+  border-radius: 20px;
+  padding: 24px 20px;
+  max-width: 320px;
+  width: 85%;
   text-align: center;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.4s ease-out;
@@ -44,8 +45,8 @@
 }
 
 .judgment-icon {
-  font-size: 80px;
-  margin-bottom: 20px;
+  font-size: 60px;
+  margin-bottom: 12px;
   animation: bounceIn 0.6s ease-out;
 }
 
@@ -62,10 +63,10 @@
 }
 
 .judgment-decision {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 16px;
-  letter-spacing: 1px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 .judgment-decision.right {
@@ -78,19 +79,23 @@
 
 .judgment-reason {
   color: #64748b;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 28px;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 16px;
   padding: 0 8px;
+  font-style: italic;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .judgment-close-btn {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  padding: 14px 40px;
-  border-radius: 12px;
-  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;

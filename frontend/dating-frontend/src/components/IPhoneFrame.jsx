@@ -11,7 +11,10 @@ export default function IPhoneFrame() {
   const [profileIdx, setProfileIdx] = useState(0);
   const [judgment, setJudgment] = useState(null);
   const [isLoadingJudgment, setIsLoadingJudgment] = useState(false);
+  const [swipeDirection, setSwipeDirection] = useState(null);
   const contentRef = useRef(null);
+  const abortControllerRef = useRef(null);
+  const currentJudgmentIndexRef = useRef(null);
   const navigate = useNavigate();
 
   // Map image filenames to imported images
@@ -20,19 +23,54 @@ export default function IPhoneFrame() {
     'girl 2.webp': girl2,
   };
 
-  const fetchAIJudgment = (index) => {
+  const fetchAIJudgment = (index, expectedProfileId) => {
+    console.log('fetchAIJudgment called with index:', index, 'expectedProfileId:', expectedProfileId);
+    
+    // If we're already loading this exact profile, don't start another request
+    if (currentJudgmentIndexRef.current === index) {
+      console.log('Already loading or loaded judgment for profile', index, 'skipping duplicate request');
+      return;
+    }
+    
+    // Cancel any pending request for a different profile
+    if (abortControllerRef.current) {
+      console.log('Aborting previous request');
+      abortControllerRef.current.abort();
+    }
+    
+    // Track which profile we're judging
+    currentJudgmentIndexRef.current = index;
+    
+    // Create new AbortController for this request
+    abortControllerRef.current = new AbortController();
+    
     setIsLoadingJudgment(true);
-    fetch(`http://localhost:8000/api/judge/${index}`)
+    console.log('Making fetch request to:', `http://localhost:8000/api/judge/${index}`);
+    
+    fetch(`http://localhost:8000/api/judge/${index}`, {
+      signal: abortControllerRef.current.signal
+    })
       .then((res) => {
+        console.log('Received response:', res.status);
         if (!res.ok) throw new Error("Failed to get AI judgment");
         return res.json();
       })
       .then((data) => {
-        setJudgment(data);
+        console.log('AI judgment data:', data);
+        // Only set judgment if it matches the expected profile
+        if (data.profile_id === expectedProfileId) {
+          setJudgment(data);
+        } else {
+          console.log('Judgment profile_id mismatch:', data.profile_id, 'vs', expectedProfileId);
+        }
         setIsLoadingJudgment(false);
       })
       .catch((err) => {
-        console.error("Error fetching AI judgment:", err);
+        if (err.name === 'AbortError') {
+          console.log('AI judgment request cancelled');
+        } else {
+          console.error("Error fetching AI judgment:", err);
+        }
         setIsLoadingJudgment(false);
       });
   };
@@ -64,7 +102,8 @@ export default function IPhoneFrame() {
         }, 0);
         
         // Fetch AI judgment for this profile
-        fetchAIJudgment(index);
+        console.log('Calling fetchAIJudgment for index:', index, 'profileId:', data.id);
+        fetchAIJudgment(index, data.id);
       })
       .catch((err) => {
         setProfile(null);
@@ -74,15 +113,61 @@ export default function IPhoneFrame() {
 
   React.useEffect(() => {
     fetchProfile(0);
+    
+    // Cleanup function to prevent duplicate calls in StrictMode
+    return () => {
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+      }
+    };
   }, []);
 
-  const handleNext = () => {
-    setJudgment(null); // Clear current judgment
-    fetchProfile(profileIdx + 1);
+  const handleNext = (direction = null) => {
+    if (direction) {
+      // Start swipe animation
+      setSwipeDirection(direction);
+      
+      // Wait for animation to complete before loading next profile
+      setTimeout(() => {
+        setJudgment(null); // Clear current judgment
+        currentJudgmentIndexRef.current = null; // Reset to allow new profile judgment
+        setSwipeDirection(null); // Reset animation state
+        fetchProfile(profileIdx + 1);
+      }, 500); // Match animation duration
+    } else {
+      setJudgment(null);
+      currentJudgmentIndexRef.current = null;
+      fetchProfile(profileIdx + 1);
+    }
   };
 
   const closeJudgment = () => {
     setJudgment(null);
+  };
+
+  const handleAutoAction = (isRight) => {
+    // First, scroll down smoothly
+    if (contentRef.current) {
+      const scrollHeight = contentRef.current.scrollHeight;
+      const clientHeight = contentRef.current.clientHeight;
+      const maxScroll = scrollHeight - clientHeight;
+      
+      contentRef.current.scrollTo({
+        top: maxScroll,
+        behavior: 'smooth'
+      });
+    }
+
+    // After scrolling completes (1 second), automatically click the button
+    setTimeout(() => {
+      // Close the judgment overlay first
+      setJudgment(null);
+      
+      // Then trigger swipe animation and proceed to next profile
+      setTimeout(() => {
+        handleNext(isRight ? 'right' : 'left');
+      }, 500);
+    }, 1000);
   };
 
   return (
@@ -95,14 +180,16 @@ export default function IPhoneFrame() {
       <div className="iphone-frame shadow">
         <div className="iphone-notch" />
         <div className="iphone-content" ref={contentRef}>
-          {profile ? (
-            <ProfileCard profile={profile} />
-          ) : (
-            <div>Loading profile...</div>
-          )}
+          <div className={`profile-container ${swipeDirection === 'left' ? 'swiping-left' : ''} ${swipeDirection === 'right' ? 'swiping-right' : ''}`}>
+            {profile ? (
+              <ProfileCard profile={profile} />
+            ) : (
+              <div>Loading profile...</div>
+            )}
+          </div>
           <div className="swipe-buttons mt-4 d-flex justify-content-between">
-            <button className="btn btn-danger swipe-left px-5" onClick={handleNext}>❌ Left</button>
-            <button className="btn btn-success swipe-right px-5" onClick={handleNext}>✅ Right</button>
+            <button className="btn btn-danger swipe-left px-5" onClick={() => handleNext('left')} disabled={swipeDirection !== null}>❌ Left</button>
+            <button className="btn btn-success swipe-right px-5" onClick={() => handleNext('right')} disabled={swipeDirection !== null}>✅ Right</button>
           </div>
         </div>
       </div>
@@ -112,7 +199,8 @@ export default function IPhoneFrame() {
         <JudgmentOverlay 
           decision={judgment.decision} 
           reason={judgment.reason} 
-          onClose={closeJudgment} 
+          onClose={closeJudgment}
+          onAutoAction={handleAutoAction}
         />
       )}
       
