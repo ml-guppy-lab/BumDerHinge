@@ -1,2 +1,4 @@
 node_modules
 **/venv/
+# Friends data (privacy protection)
+backend/profile_friends.json
