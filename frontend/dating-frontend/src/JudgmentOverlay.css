@@ -25,12 +25,14 @@
 .judgment-card {
   background: white;
   border-radius: 20px;
-  padding: 24px 20px;
-  max-width: 320px;
-  width: 85%;
+  padding: 28px 24px;
+  max-width: 400px;
+  width: 90%;
   text-align: center;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.4s ease-out;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 @keyframes slideUp {
@@ -45,8 +47,8 @@
 }
 
 .judgment-icon {
-  font-size: 60px;
-  margin-bottom: 12px;
+  font-size: 70px;
+  margin-bottom: 14px;
   animation: bounceIn 0.6s ease-out;
 }
 
@@ -63,9 +65,9 @@
 }
 
 .judgment-decision {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   letter-spacing: 0.5px;
 }
 
@@ -79,23 +81,23 @@
 
 .judgment-reason {
   color: #64748b;
-  font-size: 13px;
-  line-height: 1.4;
-  margin-bottom: 16px;
-  padding: 0 8px;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 0 10px;
   font-style: italic;
-  max-height: 60px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .judgment-close-btn {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  padding: 10px 30px;
+  padding: 12px 35px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;

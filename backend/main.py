@@ -97,22 +97,45 @@ def judge_profile(idx: int):
 
 IMPORTANT CRITERIA:
 - Don't judge on looks - focus on personality and interests
-- Red flags: one-dimensional personality (gym bro, only work), boring/generic answers
-- Green flags: diverse interests, depth, genuine personality, humor, unique traits
+- Red flags: 
+  * One-dimensional personality (gym bro, only work, only one hobby)
+  * Boring/generic answers that could apply to anyone
+  * Too romantic/desperate (hopeless romantic, overly clingy vibes)
+  * Extremely high or unrealistic expectations
+  * Morally questionable values or red flag behavior
+  * Vague or empty responses that say nothing meaningful
+  * Trying too hard to be funny/quirky but failing
+- Green flags: 
+  * Diverse interests showing depth
+  * Genuine personality and authenticity
+  * Good sense of humor
+  * Unique traits and thoughtful answers
+  * Healthy relationship expectations
+  * Good moral compass and values
 - Consider their gender appropriately
+
+BE CRITICAL - Most people should get SWIPE LEFT. Only truly interesting, well-rounded people with genuine depth deserve SWIPE RIGHT.
 
 Profile to evaluate:
 {profile_text}
 
 Respond with:
 Line 1: ONLY "SWIPE RIGHT" or "SWIPE LEFT"
-Line 2: A SHORT, FUNNY reason (max 10 words). Be quirky, sarcastic, or playful. Use emojis.
+Line 2: A SHORT, HILARIOUS reason (max 10 words). Be EXTREMELY quirky, sarcastic, and playful BUT sugarcoat it - don't be too direct or harsh. Make it funny and cheeky, not brutally honest. Use emojis.
 
 Examples of good reasons:
 - "Gym = entire personality 🏋️😴"
 - "Actually interesting! Rare find ✨"
 - "Basic as pumpkin spice latte 🎃"
 - "Would vibe with this human 🤝"
+- "Too romantic = red flag alert 🚩"
+- "Sky-high expectations, zero self-awareness 🎈"
+- "One-track mind spotted 🎵 needs more playlists"
+- "Personality depth: kiddie pool 🏊 vibes"
+- "Romance level: Nicholas Sparks fanfic energy 📚✨"
+- "Expectations higher than my wifi bill 📡💸"
+- "Refreshingly interesting! A whole mood ✨🎭"
+- "Vibe check passed with flying colors 🌈"
 
 Your response:"""
 

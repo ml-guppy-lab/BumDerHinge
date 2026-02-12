@@ -94,6 +94,8 @@ body, .app-background {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* For "caption", "name", "bio" label */
@@ -105,6 +107,7 @@ body, .app-background {
   margin-bottom: 6px;
   margin-left: 2px;
   text-transform: uppercase;
+  width: 100%;
 }
 
 /* For the big main content */
@@ -112,7 +115,10 @@ body, .app-background {
   font-size: 1.23rem;
   font-weight: 700;
   color: var(--hinge-accent);
-  line-height: 1.3;
+  line-height: 1.4;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Stretch bigger for very long bios, etc. */
