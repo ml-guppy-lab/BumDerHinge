@@ -132,9 +132,7 @@ export default function ProfileCard({ profile }) {
       {remainingElements.map((element, idx) =>
         element.type === "image" ? (
           <div className="element-card photo-card" key={idx}>
-            {element.title && <div className="element-topic">{element.title}</div>}
-            <img src={element.url} alt={element.title || "Profile"} className="profile-photo" />
-            {element.subtitle && <div className="photo-caption">{element.subtitle}</div>}
+            <img src={element.url} alt="Profile" className="profile-photo" />
           </div>
         ) : (
           <div className="element-card info-card" key={idx}>
