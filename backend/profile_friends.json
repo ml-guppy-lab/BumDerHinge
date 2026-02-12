@@ -2,15 +2,15 @@
   {
     "id": 1,
     "name": "Gopal Tyagi",
-    "profilePic": "gopal1.jpg",
+    "profilePic": "gopal1.png",
     "elements": [
       { "type": "text", "title": "Typical Sunday", "subtitle": "Watch football" },
-      { "type": "image", "title": "laughing with eyes closed", "subtitle": "", "url": "gopal2.jpg" },
+      { "type": "image", "title": "laughing with eyes closed", "subtitle": "", "url": "gopal2.png" },
       { "type": "text", "title": "One thing you should know about me", "subtitle": "high maintainace" },
       { "type": "text", "title": "You should NOT go out with me if", "subtitle": "you are messi fan" },
       { "type": "text", "title": "I beat my blues by", "subtitle": "watching football" },
       { "type": "text", "title": "I want someone who", "subtitle": "lover football" },
-      { "type": "image", "title": "launging with goggles under sunlight wearing traditional attire", "subtitle": "", "url": "gopal3.jpg" },
+      { "type": "image", "title": "launging with goggles under sunlight wearing traditional attire", "subtitle": "", "url": "gopal3.png" },
       { "type": "text", "title": "I am weirdly attracted to", "subtitle": "football" },
       { "type": "text", "title": "The hallmark of a good relationship is", "subtitle": "love football" },
       { "type": "text", "title": "In my friend group, I'm the one who", "subtitle": "is ronaldo" },
@@ -27,15 +27,15 @@
   {
     "id": 2,
     "name": "Sarvan",
-    "profilePic": "sarvan1.jpg",
+    "profilePic": "sarvan1.png",
     "elements": [
       { "type": "text", "title": "Typical Sunday", "subtitle": "Watering my plants" },
       { "type": "text", "title": "One thing you should know about me", "subtitle": "I can bifurcate notes out of a perfume" },
-      { "type": "image", "title": "smiling on a mountain", "subtitle": "", "url": "sarvan2.jpg" },
+      { "type": "image", "title": "smiling on a mountain", "subtitle": "", "url": "sarvan2.png" },
       { "type": "text", "title": "I want someone who", "subtitle": "Is emotionally mature" },
       { "type": "text", "title": "I am weirdly attracted to", "subtitle": "Perfumes with deep character" },
       { "type": "text", "title": "Change my mind about", "subtitle": "Pseudo feminism" },
-      { "type": "image", "title": "smoking while leaning on a car hood wearing south indian traditional attire", "subtitle": "", "url": "sarvan3.jpg" },
+      { "type": "image", "title": "smoking while leaning on a car hood wearing south indian traditional attire", "subtitle": "", "url": "sarvan3.png" },
       { "type": "text", "title": "Let's make sure we're on the same page about", "subtitle": "Travel destinations" },
       { "type": "text", "title": "Unusual skills", "subtitle": "I can repot a plant" }
     ]
@@ -43,16 +43,16 @@
   {
     "id": 3,
     "name": "Aryan Kumar",
-    "profilePic": "aryan1.jpg",
+    "profilePic": "aryan1.png",
     "elements": [
       { "type": "text", "title": "Typical Sunday", "subtitle": "Writing" },
       { "type": "text", "title": "One thing you should know about me", "subtitle": "Most of the time I do care. But sometimes I just don't." },
-      { "type": "image", "title": "laughing and looking away from the camera while sitting at a restaurant", "subtitle": "", "url": "aryan2.jpg" },
+      { "type": "image", "title": "laughing and looking away from the camera while sitting at a restaurant", "subtitle": "", "url": "aryan2.png" },
       { "type": "text", "title": "You should NOT go out with me if", "subtitle": "If you're not into deep conversations" },
       { "type": "text", "title": "I beat my blues by", "subtitle": "Alone time and music" },
       { "type": "text", "title": "My friends ask me for advice about", "subtitle": "Everything although they should not" },
       { "type": "text", "title": "I want someone who", "subtitle": "Is respectful." },
-      { "type": "image", "title": "reading a poem on the stage on a mic", "subtitle": "", "url": "aryan3.jpg" },
+      { "type": "image", "title": "reading a poem on the stage on a mic", "subtitle": "", "url": "aryan3.png" },
       { "type": "text", "title": "The best way to ask me out is by", "subtitle": "Music" },
       { "type": "text", "title": "Let's make sure we're on the same page about", "subtitle": "Marriage" }
     ]
@@ -60,7 +60,7 @@
   {
     "id": 4,
     "name": "Rishab Biswas",
-    "profilePic": "rishab1.jpg",
+    "profilePic": "rishab1.png",
     "elements": [
       { "type": "text", "title": "One thing you should know about me", "subtitle": "Character and honesty" },
       { "type": "text", "title": "You should NOT go out with me if", "subtitle": "You are thinking casual" },
@@ -76,16 +76,16 @@
   {
     "id": 5,
     "name": "Ambika",
-    "profilePic": "ambika1.jpg",
+    "profilePic": "ambika1.png",
     "elements": [
       { "type": "text", "title": "Typical Sunday", "subtitle": "Good sleep, Evening walk, Enjoying the weather having some good filter coffee" },
       { "type": "text", "title": "One thing you should know about me", "subtitle": "Onr thing is difficult may be I'm complex." },
-      { "type": "image", "title": "laughing while sitting on a bench", "subtitle": "", "url": "ambika2.jpg" },
+      { "type": "image", "title": "laughing while sitting on a bench", "subtitle": "", "url": "ambika2.png" },
       { "type": "text", "title": "I want someone who", "subtitle": "who is responsible and who doesn't choke when the problems arise" },
       { "type": "text", "title": "I am weirdly attracted to", "subtitle": "the humour" },
       { "type": "text", "title": "The hallmark of a good relationship is", "subtitle": "trust" },
       { "type": "text", "title": "Together we could", "subtitle": "settle in Switzerland" },
-      { "type": "image", "title": "smiling with eyes closed and looking away from the camera in front of a river", "subtitle": "", "url": "ambika3.jpg" },
+      { "type": "image", "title": "smiling with eyes closed and looking away from the camera in front of a river", "subtitle": "", "url": "ambika3.png" },
       { "type": "text", "title": "Change my mind about", "subtitle": "Happiness" },
       { "type": "text", "title": "Let's make sure we're on the same page about", "subtitle": "future goals" },
       { "type": "text", "title": "I go crazy for", "subtitle": "a tall guy" }
@@ -94,19 +94,19 @@
   {
     "id": 6,
     "name": "Gunjan",
-    "profilePic": "gunjan1.jpg",
+    "profilePic": "gunjan1.png",
     "elements": [
       { "type": "text", "title": "Typical Sunday", "subtitle": "Family lunch/ Girls catchup" },
       { "type": "text", "title": "One thing you should know about me", "subtitle": "I love love, would go an extra mile to make you feel special, basically a hopeless romantic" },
       { "type": "text", "title": "You should NOT go out with me if", "subtitle": "You don't enjoy dancing on chatpate bollywood music" },
-      { "type": "image", "title": "sitting on a park bench in switzerland", "subtitle": "", "url": "gunjan2.jpg" },
+      { "type": "image", "title": "sitting on a park bench in switzerland", "subtitle": "", "url": "gunjan2.png" },
       { "type": "text", "title": "I beat my blues by", "subtitle": "Hanging out with my friends" },
       { "type": "text", "title": "My friends ask me for advice about", "subtitle": "Dealing with breakups, work pressure" },
       { "type": "text", "title": "I want someone who", "subtitle": "Is kind to everyone, is good in communication, takes out time for their partner despite being busy" },
       { "type": "text", "title": "I am weirdly attracted to", "subtitle": "Funny men" },
       { "type": "text", "title": "The hallmark of a good relationship is", "subtitle": "Strong communication and mutual respect" },
       { "type": "text", "title": "In my friend group, I'm the one who", "subtitle": "Plans hangouts/ trips but also cancels" },
-      { "type": "image", "title": "smiling with eyes closed wearing a saree", "subtitle": "", "url": "gunjan3.jpg" },
+      { "type": "image", "title": "smiling with eyes closed wearing a saree", "subtitle": "", "url": "gunjan3.png" },
       { "type": "text", "title": "I'm in my element when", "subtitle": "I'm on the dance floor" },
       { "type": "text", "title": "Together we could", "subtitle": "Navigate life together while still having fun (& travelling )" },
       { "type": "text", "title": "The best way to ask me out is by", "subtitle": "Just being honest about how he feels about me, not on text" },
@@ -119,17 +119,17 @@
   {
     "id": 7,
     "name": "Sonal",
-    "profilePic": "sonal1.jpg",
+    "profilePic": "sonal1.png",
     "elements": [
       { "type": "text", "title": "Typical Sunday", "subtitle": "Eating chocolate strawberries outside phoenix mall" },
       { "type": "text", "title": "One thing you should know about me", "subtitle": "I love hardworking people" },
-      { "type": "image", "title": "mirror selfie wearing a kurti and a dupatta", "subtitle": "", "url": "sonal2.jpg" },
+      { "type": "image", "title": "mirror selfie wearing a kurti and a dupatta", "subtitle": "", "url": "sonal2.png" },
       { "type": "text", "title": "You should NOT go out with me if", "subtitle": "You're not a feminist" },
       { "type": "text", "title": "I beat my blues by", "subtitle": "Playing badminton/guitar or drawing" },
       { "type": "text", "title": "My friends ask me for advice about", "subtitle": "Career" },
       { "type": "text", "title": "I want someone who", "subtitle": "Is loyal and hardworking" },
       { "type": "text", "title": "I am weirdly attracted to", "subtitle": "Good guys" },
-      { "type": "image", "title": "smiling at the camera in a wedding wearing a purple colored beautiful saree", "subtitle": "", "url": "sonal3.jpg" },
+      { "type": "image", "title": "smiling at the camera in a wedding wearing a purple colored beautiful saree", "subtitle": "", "url": "sonal3.png" },
       { "type": "text", "title": "The hallmark of a good relationship is", "subtitle": "Where both partners trust each other completely" },
       { "type": "text", "title": "In my friend group, I'm the one who", "subtitle": "Is both funny and serious" },
       { "type": "text", "title": "I'm in my element when", "subtitle": "I'm working on something" },
@@ -138,6 +138,26 @@
       { "type": "text", "title": "Let's debate this topic", "subtitle": "Patriarchy" },
       { "type": "text", "title": "Let's make sure we're on the same page about", "subtitle": "Feminism and patriarchy" },
       { "type": "text", "title": "I go crazy for", "subtitle": "Chocolate strawberries" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Aman Kumar",
+    "profilePic": "aman1.png",
+    "elements": [
+      { "type": "text", "title": "Typical Sunday", "subtitle": "Splitsvilla and ghar pe bahar se mangaya hua khana." },
+      { "type": "text", "title": "One thing you should know about me", "subtitle": "I'm easily won over by small gestures." },
+      { "type": "image", "title": "", "subtitle": "", "url": "aman2.png" },
+      { "type": "text", "title": "I want someone who", "subtitle": "Have a ambition in life." },
+      { "type": "text", "title": "The hallmark of a good relationship is", "subtitle": "Communication and trust." },
+      { "type": "text", "title": "In my friend group, I'm the one who", "subtitle": "Have a calm and good presence of mind." },
+      { "type": "image", "title": "", "subtitle": "", "url": "aman3.png" },
+      { "type": "text", "title": "I'm in my element when", "subtitle": "I'm not in my element, the lement is in me!" },
+      { "type": "text", "title": "Together we could", "subtitle": "Build a home." },
+      { "type": "text", "title": "Let's debate this topic", "subtitle": "Street food vs restaurant food." },
+      { "type": "text", "title": "Let's make sure we're on the same page about", "subtitle": "Where to eat." },
+      { "type": "text", "title": "Unusual skills", "subtitle": "I only have usual skills" },
+      { "type": "text", "title": "I go crazy for", "subtitle": "Girls who are alive" }
     ]
   }
 ]

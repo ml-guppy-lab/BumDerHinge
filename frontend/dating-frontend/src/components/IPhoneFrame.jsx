@@ -1,7 +1,34 @@
 import React, { useState, useRef } from "react";
-import girl1 from '../assets/girl 1.webp';
-import girl2 from '../assets/girl 2.webp';
-// import profiles from "../profiles";
+// Test images
+// import girl1 from '../assets/girl 1.webp';
+// import girl2 from '../assets/girl 2.webp';
+
+// Friends images
+import gopal1 from '../assets/friends/gopal1.png';
+import gopal2 from '../assets/friends/gopal2.png';
+import gopal3 from '../assets/friends/gopal3.png';
+import sarvan1 from '../assets/friends/sarvan1.png';
+import sarvan2 from '../assets/friends/sarvan2.png';
+import sarvan3 from '../assets/friends/sarvan3.png';
+import aryan1 from '../assets/friends/aryan1.png';
+import aryan2 from '../assets/friends/aryan2.png';
+import aryan3 from '../assets/friends/aryan3.png';
+import rishab1 from '../assets/friends/rishab1.png';
+// import rishab2 from '../assets/friends/rishab2.png';
+// import rishab3 from '../assets/friends/rishab3.png';
+import ambika1 from '../assets/friends/ambika1.png';
+import ambika2 from '../assets/friends/ambika2.png';
+import ambika3 from '../assets/friends/ambika3.png';
+import gunjan1 from '../assets/friends/gunjan1.png';
+import gunjan2 from '../assets/friends/gunjan2.png';
+import gunjan3 from '../assets/friends/gunjan3.png';
+import sonal1 from '../assets/friends/sonal1.png';
+import sonal2 from '../assets/friends/sonal2.png';
+import sonal3 from '../assets/friends/sonal3.png';
+import aman1 from '../assets/friends/aman1.jpg';
+import aman2 from '../assets/friends/aman2.jpg';
+import aman3 from '../assets/friends/aman3.jpg';
+
 import ProfileCard from "./ProfileCard";
 import JudgmentOverlay from "./JudgmentOverlay";
 import { useNavigate } from 'react-router-dom';
@@ -19,8 +46,35 @@ export default function IPhoneFrame() {
 
   // Map image filenames to imported images
   const imageMap = {
-    'girl 1.webp': girl1,
-    'girl 2.webp': girl2,
+    // Test images
+    // 'girl 1.webp': girl1,
+    // 'girl 2.webp': girl2,
+    
+    // Friends images
+    'gopal1.png': gopal1,
+    'gopal2.png': gopal2,
+    'gopal3.png': gopal3,
+    'sarvan1.png': sarvan1,
+    'sarvan2.png': sarvan2,
+    'sarvan3.png': sarvan3,
+    'aryan1.png': aryan1,
+    'aryan2.png': aryan2,
+    'aryan3.png': aryan3,
+    'rishab1.png': rishab1,
+    // 'rishab2.png': rishab2,
+    // 'rishab3.png': rishab3,
+    'ambika1.png': ambika1,
+    'ambika2.png': ambika2,
+    'ambika3.png': ambika3,
+    'gunjan1.png': gunjan1,
+    'gunjan2.png': gunjan2,
+    'gunjan3.png': gunjan3, 
+    'sonal1.png': sonal1,
+    'sonal2.png': sonal2,
+    'sonal3.png': sonal3,
+    'aman1.png': aman1,
+    'aman2.png': aman2,
+    'aman3.png': aman3,
   };
 
   const fetchAIJudgment = (index, expectedProfileId) => {
