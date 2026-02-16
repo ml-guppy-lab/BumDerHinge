@@ -28,6 +28,9 @@ import sonal3 from '../assets/friends/sonal3.png';
 import aman1 from '../assets/friends/aman1.jpg';
 import aman2 from '../assets/friends/aman2.jpg';
 import aman3 from '../assets/friends/aman3.jpg';
+import vaishnavi1 from '../assets/friends/vaishnavi1.jpg';
+import vaishnavi2 from '../assets/friends/vaishnavi2.jpg';
+import vaishnavi3 from '../assets/friends/vaishnavi3.jpg';
 
 import ProfileCard from "./ProfileCard";
 import JudgmentOverlay from "./JudgmentOverlay";
@@ -75,6 +78,9 @@ export default function IPhoneFrame() {
     'aman1.png': aman1,
     'aman2.png': aman2,
     'aman3.png': aman3,
+    'vaishnavi1.png': vaishnavi1,
+    'vaishnavi2.png': vaishnavi2,
+    'vaishnavi3.png': vaishnavi3,
   };
 
   const fetchAIJudgment = (index, expectedProfileId) => {

@@ -22,6 +22,7 @@ initialize repository: git remote set-url origin https://github.com/ml-guppy-lab
 4. npm install bootstrap
 5. npm install react-router-dom
 
+cd frontend/dating-frontend
 
 ----------------------------------------------------------------------------------------------
 ************ backend *******************************************************

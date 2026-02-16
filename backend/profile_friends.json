@@ -42,6 +42,28 @@
   },
   {
     "id": 3,
+    "name": "Vaishnavi",
+    "profilePic": "vaishnavi1.png",
+    "elements": [
+      { "type": "text", "title": "Typical Sunday", "subtitle": "Run, breakfast, house chores, read, sleep" },
+      { "type": "text", "title": "One thing you should know about me", "subtitle": "I’m an adrenaline junkie" },
+      { "type": "text", "title": "You should NOT go out with me if", "subtitle": "you’re a nonchalant final boss, can’t make me laugh or stimulate my brain" },
+      { "type": "text", "title": "I beat my blues by", "subtitle": "going on LONG walks" },
+      { "type": "image", "title": "smiling in a cute dress", "subtitle": "", "url": "vaishnavi2.png" },
+      { "type": "text", "title": "My friends ask me for advice about", "subtitle": "on outfits" },
+      { "type": "text", "title": "I want someone who", "subtitle": "I can be goofy with" },
+      { "type": "text", "title": "I am weirdly attracted to", "subtitle": "nerdy men with a good fashion sense" },
+      { "type": "text", "title": "The hallmark of a good relationship is", "subtitle": "basically dating your best friend" },
+      { "type": "text", "title": "In my friend group, I'm the one who", "subtitle": "is always late" },
+      { "type": "text", "title": "I'm in my element when", "subtitle": "I am cooking" },
+      { "type": "image", "title": "selfie wearing a kurti and smiling", "subtitle": "", "url": "vaishnavi3.png" },
+      { "type": "text", "title": "Let's debate this topic", "subtitle": "Why is getting married necessary?" },
+      { "type": "text", "title": "Let's make sure we're on the same page about", "subtitle": "what we’re looking for" },
+      { "type": "text", "title": "Unusual skills", "subtitle": "I spot good fashion and red flags fast" }
+    ]
+  },
+  {
+    "id": 4,
     "name": "Aryan Kumar",
     "profilePic": "aryan1.png",
     "elements": [
@@ -58,7 +80,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Rishab Biswas",
     "profilePic": "rishab1.png",
     "elements": [
@@ -74,14 +96,14 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Ambika",
     "profilePic": "ambika1.png",
     "elements": [
       { "type": "text", "title": "Typical Sunday", "subtitle": "Good sleep, Evening walk, Enjoying the weather having some good filter coffee" },
-      { "type": "text", "title": "One thing you should know about me", "subtitle": "Onr thing is difficult may be I'm complex." },
+      { "type": "text", "title": "One thing you should know about me", "subtitle": "One thing is difficult, maybe I'm complex." },
       { "type": "image", "title": "laughing while sitting on a bench", "subtitle": "", "url": "ambika2.png" },
-      { "type": "text", "title": "I want someone who", "subtitle": "who is responsible and who doesn't choke when the problems arise" },
+      { "type": "text", "title": "I want someone who", "subtitle": "is responsible and doesn't panic when problems arise" },
       { "type": "text", "title": "I am weirdly attracted to", "subtitle": "the humour" },
       { "type": "text", "title": "The hallmark of a good relationship is", "subtitle": "trust" },
       { "type": "text", "title": "Together we could", "subtitle": "settle in Switzerland" },
@@ -92,7 +114,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Gunjan",
     "profilePic": "gunjan1.png",
     "elements": [
@@ -117,7 +139,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Sonal",
     "profilePic": "sonal1.png",
     "elements": [
@@ -141,7 +163,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Aman Kumar",
     "profilePic": "aman1.png",
     "elements": [

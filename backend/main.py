@@ -87,10 +87,17 @@ def judge_profile(idx: int):
     profile_text += "Profile elements:\n"
     
     for el in profile.get('elements', []):
+        if el.get('title') == 'Timestamp':
+            continue  # Skip timestamp
         if el.get('type') == 'text':
-            profile_text += f"- {el.get('title', '')}: {el.get('subtitle', '')}\n"
+            subtitle = el.get('subtitle', '').strip()
+            if subtitle:  # Only add if not empty
+                profile_text += f"- {el.get('title', '')}: {subtitle}\n"
         elif el.get('type') == 'image':
-            profile_text += f"- Image: {el.get('title', '')} {el.get('subtitle', '')}\n"
+            title = el.get('title', '').strip()
+            subtitle = el.get('subtitle', '').strip()
+            if title or subtitle:
+                profile_text += f"- Image: {title} {subtitle}\n"
     
     # Create judgment prompt
     prompt = f"""You are a sassy, witty dating profile judge. Be brutally honest but funny.
@@ -105,6 +112,14 @@ IMPORTANT CRITERIA:
   * Morally questionable values or red flag behavior
   * Vague or empty responses that say nothing meaningful
   * Trying too hard to be funny/quirky but failing
+  * Only talking about themselves without showing interest in others
+  * Lack of self-awareness or humility (sky-high standards but no self-reflection)
+  * Overuse of cliches or buzzwords without substance (e.g. "I love to travel and try new foods" with no specifics)
+  * Extremely generic or basic interests (e.g. "I like movies and music" with no further detail)
+  * Extremely one-track mind (e.g. only talking about work, gym, or one hobby with no other interests)
+  * Extremely high romance expectations (e.g. "I want a soulmate who will love me forever and never argue" or "I want a relationship straight out of a Nicholas Sparks novel")
+  * Extremely high standards without self-awareness (e.g. "I want someone who is perfect in every way" with no acknowledgment of their own flaws)
+  * Too judgemental or overly demanding of potential matches, with harsh requirements that show lack of flexibility or openness
 - Green flags: 
   * Diverse interests showing depth
   * Genuine personality and authenticity
@@ -143,23 +158,42 @@ Your response:"""
     try:
         model, tokenizer = get_model()
         
-        # Simpler approach: direct tokenization
-        input_ids = tokenizer(
+        # Tokenize with attention mask
+        inputs = tokenizer(
             prompt,
             return_tensors="pt",
             padding=True,
             truncation=True,
             max_length=2048
-        ).input_ids.to(model.device)
-        
-        outputs = model.generate(
-            input_ids,
-            max_new_tokens=150,
-            temperature=0.7,
-            top_p=0.9,
-            do_sample=True,
-            pad_token_id=tokenizer.pad_token_id
         )
+        input_ids = inputs['input_ids'].to(model.device)
+        attention_mask = inputs['attention_mask'].to(model.device)
+        
+        # Try sampling first, fallback to greedy if it fails
+        try:
+            outputs = model.generate(
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                max_new_tokens=150,
+                temperature=0.7,
+                top_p=0.9,
+                min_p=0.05,  # Prevent sampling from very low probability tokens
+                do_sample=True,
+                pad_token_id=tokenizer.pad_token_id
+            )
+        except RuntimeError as gen_error:
+            if "probability tensor" in str(gen_error):
+                print(f"Sampling failed for profile {idx}, falling back to greedy decoding")
+                # Fallback to greedy decoding
+                outputs = model.generate(
+                    input_ids=input_ids,
+                    attention_mask=attention_mask,
+                    max_new_tokens=150,
+                    do_sample=False,
+                    pad_token_id=tokenizer.pad_token_id
+                )
+            else:
+                raise
         
         response = tokenizer.decode(outputs[0][input_ids.shape[-1]:], skip_special_tokens=True)
         
